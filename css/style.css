@@ -230,6 +230,7 @@ footer, #page-wrap:after {height: 10px}
 }
 
 #main_social_block_content{
+	color: black;
 	text-align: center;	
 	padding: 2.5%;
 /*	height: 50px;
