@@ -428,6 +428,10 @@ footer, #page-wrap:after {height: 10px}
 	height: auto;
 	padding: 6%;
 }
+.article_more_content a#button:hover{
+	background-image: url(../img/download2.png);
+}
+
 .article_more_content label[for='button']{
 	float: left;
 	text-align: center;
