@@ -15,15 +15,38 @@
 <!-- <body bgcolor="#333"> -->
 <body>
 	<div id='page-wrap'>
-		<header>
+				<header>
 			<h1>
 			<a href='../index.html' title="Главная" id='logo' >SilverSide</a>
-			<input type="text" class='field' placeholder="Search" >
 			<span class="right">
-				<a href="../reg.html" class='regist'>Sing up&ensp;</a>
-				<a href="../singin.html" class='regist'>Sing in</a>
+				<a href="#" class='openModalSU'>Sign up&ensp;</a>
+				<a class='openModalSI'>Sign in</a>
 			</span>
 			</h1>
+			<dialog id='sign_in' >
+				<div class="closeModalSI" >
+					<h1>Sign in</h1>
+					<form id="signin" method="" action="" autocomplete="off">
+						<input type="text" id="user" name="user" placeholder="Username" />
+						<input type="password" id="pass" name="pass" placeholder="Password" />
+						<button type="submit">⨀</button>
+						<p>Forgot your password? <a href="#">click here</a></p>
+					</form>
+				</div>
+			</dialog>
+			<dialog id='sign_up' >
+				<div class="closeModalSU" >
+					<h1>Sign up</h1>
+					<form id="signup" method="" action="" autocomplete="off">
+						<input type="text" id="user" name="user" placeholder="Username" /><hr> 
+						<input type="email" id="email" name="email" placeholder="Email" /><hr> 
+						<input type="password" id="pass" name="pass" placeholder="Password" /><hr> 
+						<input type="password" id="pass" name="pass" placeholder="Password confirm" />
+						<button type="submit">⨀</button>
+					</form>
+				</div>
+			</dialog>
+				<script type="text/javascript" src="../js/sign_handlers.js"></script>
 		</header>
 		<div class='clear'>
 			<br>
