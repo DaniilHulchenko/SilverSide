@@ -33,7 +33,10 @@ a{
 	transition: all.6s ease;
 }
 a:hover {
-	color: #8B0000;
+/*	color: #8B0000;*/
+	color: rgb(0, 126, 165);
+	color: rgb(0, 126, 165);
+	text-shadow: 0 0 10px rgb(0, 126, 165);
 	transition: all.6s ease;
 }
 a:active {
@@ -42,7 +45,7 @@ a:active {
 
 
 
-.modal{
+/*.modal{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -84,7 +87,7 @@ a:active {
 
 .modal button:hover{
 	opacity: 0.5;
-}
+}*/
 
 
 
@@ -253,16 +256,28 @@ footer, #page-wrap:after {height: 10px}
 	color: white;
 }
 #wrapper #articles article a{
-	padding: 5px 5px;
+	padding: 5px 8px;
+
 	float: right;
- 	margin-bottom: 1px;
+ 	margin-bottom: 5px;
+ 	margin-top: max(10px, 20px);
+/* 	position: absolute;
+ 	left: 70%;*/
+ 	margin-top: auto;
+ 	margin-bottom: auto;
+
+/* 	bottom: 10%;*/
 
 
 	border-radius: 3px;
 	background-color: #333;
 	color: white;
+	position: relative;
 }
-#wrapper #articles article a: hover{background-color: #222;}
+#wrapper #articles article a: hover{
+
+	background-color: #222;
+}
 
 #main_social_block{
 	width: 100%;
@@ -325,7 +340,7 @@ footer, #page-wrap:after {height: 10px}
 
 
 .contact_form{
-	margin-top: 5%;
+	margin-top: 3%;
 	width: 80%;
 	margin-left: 13%;
 	float: left;
@@ -358,6 +373,9 @@ footer, #page-wrap:after {height: 10px}
 	clear: both;
 	float: left;
 	width: 86%;
+	min-width: 86%;
+	max-width: 86%;
+	min-height: 100px;
 	height: 100px;
 	border: 3px solid black;
 	border-radius: 5px;
@@ -385,7 +403,7 @@ footer, #page-wrap:after {height: 10px}
 
 .location{
 	height: 300px;
-	margin-top: 30px;
+	margin-top: 20px;
 	margin-left: 10%;
 	width: 80%;
 	background-color: #555;
@@ -436,6 +454,7 @@ footer, #page-wrap:after {height: 10px}
 .article_more_content img{
 
 /*	padding-top: 7%;*/
+	border-radius: 5px;
 	float: left;
 	width: 55% ;
 	height: auto;
@@ -492,3 +511,165 @@ footer, #page-wrap:after {height: 10px}
 	font-size: 2em;
 /*	color: lightgreen;*/
 }
+
+
+
+/* === Sign in Form === */
+dialog{
+	overflow: hidden;
+	position: fixed;
+
+/*	top:10%;*/
+/*	padding: 2%;*/
+	z-index: 1;
+/*	width: 200%;*/
+/*	height: 200%;*/
+	background-color: rgb(0, 0, 0);
+	background: 0;
+	align-items: center;
+	justify-content: center;
+
+}
+dialog .closeModalSI, dialog .closeModalSU{
+	z-index: 2;
+	margin: -1%;
+	position: fixed;
+	top:-3.5%;
+	background-color: rgb(0, 0, 0, 0.9);
+	width: 110%;
+	height: 200%;
+}
+/*dialog::backdrop{
+	background-color: #333;
+	opacity: 0.8;
+}*/
+dialog div form{
+	margin: 3% 37%;
+	position: fixed;
+	
+}
+dialog div h1{
+/*	padding: 10%;*/
+	color: rgb(255, 255, 255);
+	margin: 10% 41% 1%;
+	width: 200px;
+	text-align: center;
+}
+dialog[id='sign_up'] div h1{
+/*	padding: 10%;*/
+	color: rgb(255, 255, 255);
+	margin: 10% 41% 1%;
+	width: 200px;
+	text-align: center;
+}
+
+
+#signin,#signup{
+	height: 90px;
+	width: 300px;
+	border-radius: 8px;
+	position: relative;
+}
+/*#signin::before, #signup::before{*/
+#signin::before{
+	display: block;
+	position: relative;
+	height: 2px;
+	background: rgb(52, 56, 61);
+	content: '';
+	top: 44px;
+	margin-left: 20px;
+	z-index: 1;
+}
+#signup hr{
+	all: unset;
+	display: block;
+	position: relative;
+	height: 2px;
+	background: rgb(52, 56, 61);
+	content: '';
+	bottom: 2px;
+	border: 0;
+/*	top: 44px;*/
+
+	padding-left: 20px;
+	z-index: 1;
+/*	background-color: red;*/
+
+}
+
+
+#signin input:first-of-type,#signup input:first-of-type{
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+#signin input:last-of-type,#signup input:last-of-type{
+	border-bottom-right-radius: 8px;
+/*	border-bottom-left-radius: 8px;*/
+	border-bottom-left-radius: 50px;
+}
+#signin  input[type="text"], #signin  input[type="password"], #signin button[type="submit"],#signup  input[type="text"], #signup  input[type="password"], #signup button[type="submit"],#signup input[type="email"]{
+	background: rgb(28, 30, 33);
+	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); Prevent yellow autofill color
+	color: rgb(52, 56, 61);
+}
+#signin  input[type="text"], #signin  input[type="password"],#signup  input[type="text"], #signup  input[type="password"],#signup input[type="email"]{
+	color: white;
+	position: relative;
+	display: block;
+	width: 280px;
+	height: 45px;
+	border: 0;
+	outline: 0;
+	top: -2px;
+	padding: 0 0 0 20px;
+	font-weight: 700;
+}
+#signin  input[type="text"]:focus, #signin  input[type="password"],#signup  input[type="text"]:focus, #signup  input[type="password"]:focus{
+	color: rgb(255, 255, 255);
+}
+#signin button[type="submit"],#signup button[type="submit"]{
+	display: block;
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	color: rgb(52, 56, 61);
+	border-radius: 50px;
+	outline: 0;
+	z-index: 2;
+	top: 20px;
+	right: -24px;
+	border: 6px solid rgb(52, 56, 61);
+	font-size: 25px;
+	text-indent: 0px;
+/*	padding-left: 1px;*/
+	padding-bottom: 3px;
+	text-align: center;
+}
+#signup button[type="submit"]{
+/*	top:50px;*/
+	margin-top: 15%;
+}
+#signin button[type="submit"]:hover,#signup button[type="submit"]:hover{
+	color: rgb(0, 126, 165);
+	text-shadow: 0 0 10px rgb(0, 126, 165);
+	cursor: pointer;
+}
+#signin p,#signup p {
+	color: rgb(79, 85, 97);
+	padding: 0 20px;
+	font-weight: 700;
+	font-size: 12px;
+	margin: 5px 0 0 0;
+}
+#signin p > a,#signup p > a{
+	color: rgb(111, 119, 135);
+	text-decoration: none;
+}
+#signin p > a:hover, #signup p > a:hover{
+	border-bottom: 1px solid;
+}
+
+
+
+/*color: rgb(0, 126, 165);*/

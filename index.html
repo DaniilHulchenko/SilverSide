@@ -10,6 +10,8 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link href="img/icon.png" rel="shortcut icon" type="image/x-icon" />
 
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+
 	<title>SilverSide</title>
 </head>
 <!-- <body bgcolor="#333"> -->
@@ -18,14 +20,40 @@
 		<header>
 			<h1>
 			<a href='index.html' title="Главная" id='logo' >SilverSide</a>
-			<input type="text" class='field' placeholder="Search" >
+			<!-- <input type="text" class='field' placeholder="Search" > -->
 			<span class="right">
-				<a href="#" class='open-popup'>Sing up&ensp;</a>
-				<a href="singin.html" class='regist'>Sing in</a>
+				<a href="#" class='openModalSU'>Sign up&ensp;</a>
+			  <!-- <a onclick="document.querySelector('#sign_in').showModal();" class='openModal'>sign in</a> -->
+				<a class='openModalSI'>Sign in</a>
 			</span>
 			</h1>
-
-
+			<dialog id='sign_in' >
+				<div class="closeModalSI" >
+					<h1>Sign in</h1>
+					<form id="signin" method="" action="" autocomplete="off">
+						<input type="text" id="user" name="user" placeholder="Username" />
+						<input type="password" id="pass" name="pass" placeholder="Password" />
+						<button type="submit">⨀</button>
+						<p>Forgot your password? <a href="#">click here</a></p>
+					</form>
+				</div>
+				<!-- <script type="text/javascript"></script> -->
+			</dialog>
+			<dialog id='sign_up' >
+				<div class="closeModalSU" >
+					<h1>Sign up</h1>
+					<form id="signup" method="" action="" autocomplete="off">
+						<input type="text" id="user" name="user" placeholder="Username" /><hr> 
+						<input type="email" id="email" name="email" placeholder="Email" /><hr> 
+						<input type="password" id="pass" name="pass" placeholder="Password" /><hr> 
+						<input type="password" id="pass" name="pass" placeholder="Password confirm" />
+						<button type="submit">⨀</button>
+						<!-- <p>Forgot your password? <a href="#">click here</a></p> -->
+					</form>
+				</div>
+				<!-- <script type="text/javascript"></script> -->
+			</dialog>
+				<script type="text/javascript" src="js/sign_handlers.js"></script>
 
 
 
@@ -37,10 +65,6 @@
 			</div>
 			<script src="js/main.js"></script>
  -->
-
-
-
-
 		</header>
 		<div class='clear'>
 			<br>
@@ -112,7 +136,7 @@
 					<article>
 						<img src="img/7.jpg" alt="1" title="7">
 						<h2>House under the snow</h2>
-						<p>A little house at winter midday</p>
+						<p>A little house at winter midday</p><br>
 						<a href="articles/7.html">See more</a>
 					</article>
 					<article>
@@ -124,7 +148,7 @@
 					<article>
 						<img src="img/9.jpg" alt="1" title="9">
 						<h2>House under the snow</h2>
-						<p>A little house at winter evening.</p>
+						<p>A little house at winter evening.</p><br>
 						<a href="articles/9.html">See more</a>
 					</article>
 				</div>
@@ -141,7 +165,7 @@
 	</div>
 
 	<footer>
-		<span>This site was designed by Silverus Morgan</span>
+		<span>This site was designed by <strong>Silverus Morgan</strong></span>
 	</footer>
 </body>
 
