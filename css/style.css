@@ -673,3 +673,30 @@ dialog[id='sign_up'] div h1{
 
 
 /*color: rgb(0, 126, 165);*/
+
+
+/* навигация  */
+
+.b-navigation {
+/*	height: 1%;*/
+/*	float: left;*/
+	margin-bottom: 50%;
+/*margin-top: inherit;margin-top: initial;*/
+    border-top: 1px solid #dcdcdc;
+    color: white;
+    clear: both;
+    font-size: 1.5em;
+    line-height: 15px;
+    padding-top: 1%;
+    padding-bottom: 0.7%;
+    text-align: center;
+}
+
+.b-navigation span > a{
+	 color: white;
+}
+
+
+.b-navigation a{
+	color: gray;
+}
